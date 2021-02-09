@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <h1>THis is HomePage,Hello, <%= name %>!</h1>
+    <p>you are <%= age * 7 %> years old in dog years.</p>
+    <% 
+        let status
+        if (age<32) {
+        status = 'young'
+        } else {
+        status = 'experienced'
+        } 
+    %>
+    <h3>This means you are <%=status%>!</h3>
+    <%-include('../partials/footer.ejs') %>
+</body>
+</html>
